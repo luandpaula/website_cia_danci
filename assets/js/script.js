@@ -35,7 +35,7 @@ $(document).ready(function(){
 
     // typing text animation script
     var typed = new Typed(".typing", {
-        strings: ["essência", "consciência", "ciência"],
+        strings: ["inspiração", "essência", "harmonia", "liberdade"],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true
