@@ -88,7 +88,7 @@ section .title::after{
 }
 .navbar.sticky{
     padding: 5px 0;
-    background: black;
+    background: rgba(255, 255, 255, 0.8);
 }
 .navbar .max-width{
     display: flex;
@@ -96,18 +96,24 @@ section .title::after{
     justify-content: space-between;
 }
 .navbar .logo img{
-    width: 100%;
-    height: 49px;
-    margin-left: -29px;
-    font-size: 35px;
-    font-weight: 600;
+    height: 49px; /* Defina a altura desejada */
+    width: auto; /* Use auto para manter a proporção */
+    margin-left: -29px; /* Se realmente necessário */
+    max-width: 150px; /* Defina um limite de largura */
+    object-fit: contain; /* Mantém a proporção */
 }
 .navbar .logo a span{
     color: #902510;
     transition: all 0.3s ease;
 }
+@media (max-width: 600px) {
+    .navbar .logo img {
+      width: auto;
+      height: 40px; /* Defina um tamanho menor para dispositivos móveis */
+    }
+}  
 .navbar.sticky .logo a span{
-    color: #fff;
+    color: rgba(255, 255, 255, 0.8);
 }
 .navbar .menu li{
     list-style: none;
@@ -115,7 +121,7 @@ section .title::after{
 }
 .navbar .menu li a{
     display: block;
-    color: #fff;
+    color: #902510;
     font-size: 18px;
     font-weight: 500;
     margin-left: 25px;
@@ -167,14 +173,20 @@ section .title::after{
 /* home section styling */
 .home{
     display: flex;
-    background: linear-gradient(rgba(7, 7, 7, 0.90), rgba(0, 0, 0, 0.90)), url(/assets/img/414201176_1012862433125822_5021310120476706923_n.jpg) no-repeat center;
-    opacity: 10% black;
+    background: linear-gradient(rgba(218, 217, 217, 0.9), rgba(145, 145, 145, 0.9)), url('https://ciadanci.com.br/assets/img/background.webp') no-repeat center center;
     height: 100vh;
     color: #fff;
     min-height: 500px;
     background-size: cover;
-    background-attachment: fixed;
+    background-position: center;
+    background-attachment: scroll; /* Substitua 'fixed' por 'scroll' */
     font-family: 'Ubuntu', sans-serif;
+}
+/* Adicione uma regra específica para o Safari, se necessário */
+@supports (-webkit-touch-callout: none) {
+    .home {
+      background-attachment: scroll; /* O Safari tem problemas com 'fixed' */
+    }
 }
 .home .max-width{
   width: 100%;
@@ -200,11 +212,11 @@ section .title::after{
     display: inline-block;
     background: #902510;
     color: #fff;
-    font-size: 25px;
-    padding: 12px 36px;
+    font-size: 15px;
+    padding: 8px 25px;
     margin-top: 20px;
     font-weight: 400;
-    border-radius: 6px;
+    border-radius: 25px;
     border: 2px solid #902510;
     transition: all 0.3s ease;
 }
@@ -244,11 +256,11 @@ section .title::after{
     display: inline-block;
     background: #902510;
     color: #fff;
-    font-size: 20px;
-    font-weight: 500;
-    padding: 10px 30px;
+    font-size: 15px;
+    padding: 8px 25px;
     margin-top: 20px;
-    border-radius: 6px;
+    font-weight: 400;
+    border-radius: 25px;
     border: 2px solid #902510;
     transition: all 0.3s ease;
 }
@@ -269,7 +281,7 @@ section .title::after{
 .services .title::after,
 .teams .title::after{
     background: #111;
-    content: "what i provide";
+    content: "Diferenciais";
 }
 .services .serv-content .card{
     width: calc(33% - 20px);
@@ -323,11 +335,11 @@ section .title::after{
     display: inline-block;
     background: #902510;
     color: #fff;
-    font-size: 18px;
-    font-weight: 500;
-    padding: 8px 16px;
+    font-size: 15px;
+    padding: 8px 25px;
     margin-top: 20px;
-    border-radius: 6px;
+    font-weight: 400;
+    border-radius: 25px;
     border: 2px solid #902510;
     transition: all 0.3s ease;
 }
@@ -441,6 +453,110 @@ section .title::after{
     background: #902510!important;
 }
 
+
+
+
+
+/*Gallery Section*/
+.gallery {
+    position: relative;
+    overflow: hidden;
+    height: 100vb;
+}
+
+.gallery-slider .gallery-item {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.4s ease;
+}
+
+.gallery-slider .gallery-item img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-slider .gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.owl-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.owl-nav button {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.owl-nav button:hover {
+    background-color: rgba(255, 255, 255, 1);
+    border-color: #000;
+}
+
+.owl-nav button.owl-prev {
+    margin-left: -20px;
+}
+
+.owl-nav button.owl-next {
+    margin-right: -20px;
+}
+
+.modal {
+    display: none; /* Inicialmente oculto */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo com opacidade */
+}
+
+
+.modal-content {
+    position: relative;
+    margin: auto; /* Garante que o modal se alinhe centralizado na tela */
+    padding: 20px;
+    width: 80%;
+    max-width: 800px;
+    text-align: center; /* Centraliza o conteúdo */
+}
+
+.modal-content img,
+.modal-content video {
+    display: block; /* Garante que a mídia ocupe toda a linha */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    max-width: 100%; /* Limita a largura da imagem ao tamanho da tela */
+    max-height: 80vh; /* Limita a altura da imagem para não ultrapassar a tela */
+    border-radius: 8px; /* Opcional */
+}
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+
+
 /* footer section styling */
 footer {
     background: black;
@@ -547,9 +663,27 @@ footer {
   }
   
   @media(max-width: 700px){
-    .footer-links{
+    .footer-top{
+        display: none;
+      }
+      .footer-links{
         flex-direction: column;
-    }
+      }
+      .footer-section{
+          display:none
+      }
+      .social-media h3{
+        font-size: 12px;
+      }
+      .newsletter{
+        visibility: hidden;
+      }
+      .footer-links h4{
+        font-size: 12px;
+      }
+      .footer-links ul li a{
+        font-size: 12px;
+      }
   }
   
 
