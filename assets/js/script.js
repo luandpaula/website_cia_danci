@@ -118,4 +118,37 @@ $(document).ready(function(){
     $('.modal-content').click(function(event){
         event.stopPropagation();
     });
+
+    
+    
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const openFormBtn = document.getElementById('open-form-btn'); // Botão para abrir o modal
+    const modal = document.getElementById('form-modal'); // Modal do formulário
+    const closeBtn = document.querySelector('.close-btn'); // Botão de fechar no modal
+
+    // Verifica se os elementos existem antes de adicionar eventos
+    if (openFormBtn && modal && closeBtn) {
+        // Abre o modal ao clicar no botão
+        openFormBtn.addEventListener('click', () => {
+            modal.style.display = 'flex'; // Exibe o modal como flex
+        });
+
+        // Fecha o modal ao clicar no botão de fechar
+        closeBtn.addEventListener('click', () => {
+            modal.style.display = 'none'; // Oculta o modal
+        });
+
+        // Fecha o modal ao clicar fora do conteúdo do modal
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none'; // Oculta o modal
+            }
+        });
+    } else {
+        console.error('Elementos essenciais do modal não foram encontrados no DOM.');
+    }
+});
+
