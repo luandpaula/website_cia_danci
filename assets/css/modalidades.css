@@ -1,0 +1,316 @@
+/* home section styling */
+.home3{
+    display: flex;
+    background: linear-gradient(rgba(218, 217, 217, 0.9), rgba(145, 145, 145, 0.9)), url('/assets/img/modalidades/g22.webp') no-repeat center center;
+    height: 100vh;
+    color: #fff;
+    min-height: 500px;
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll; /* Substitua 'fixed' por 'scroll' */
+    font-family: 'Ubuntu', sans-serif;
+}
+/* Adicione uma regra específica para o Safari, se precisar */
+@supports (-webkit-touch-callout: none) {
+    .home3 {
+      background-attachment: scroll; /* O Safari tem problemas com 'fixed' */
+    }
+}
+.home3 .max-width{
+  width: 100%;
+  display: flex;
+}
+.home3 .max-width .row{
+  margin-right: 0;
+}
+.home3 .home-content3 .text-2{
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+.home3 .home-content3 .text-3{
+    font-size: 40px;
+    margin: 5px 0;
+}
+.home3 .home-content3 .text-3 span{
+    color: #902510;
+    font-weight: 500;
+}
+.home3 .home-content3 a{
+    display: inline-block;
+    background: #902510;
+    color: #fff;
+    font-size: 15px;
+    padding: 8px 25px;
+    margin-top: 20px;
+    font-weight: 400;
+    border-radius: 25px;
+    border: 2px solid #902510;
+    transition: all 0.3s ease;
+}
+.home3 .home-content3 a:hover{
+    color: #902510;
+    background: none;
+}
+
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.page-header {
+    text-align: center;
+    padding: 50px 20px;
+    background: #f1f1f1;
+}
+
+.page-header .title {
+    font-size: 36px;
+    color: #902510;
+    margin-bottom: 15px;
+}
+
+.page-header .intro-text {
+    font-size: 18px;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Estilos para Modalidades */
+.genres {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    padding: 100px 260px;
+    margin: auto;
+    gap: 40px;
+    background: #f1f1f1;
+}
+
+.genre {
+    background: #ffffff;
+    border-radius: 25px;
+    box-shadow: 1px 2px 5px #902510;
+    padding: 20px;
+    max-width: 350px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.genre:hover {
+    transform: translateY(-4px);
+    box-shadow: 5px 5px 10px #902510;
+}
+
+.genre-image {
+    width: 100%;
+    height: 160px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.genre h2 {
+    font-size: 28px;
+    color: #902510;
+    margin-bottom: 15px;
+}
+
+.genre p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.explore-button {
+    display: inline-block;
+    background-color: #902510;
+    color: #fff;
+    padding: 8px 25px;
+    border-radius: 25px;
+    border: 2px solid #902510;
+    margin-top: 20px;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s ease;
+}
+
+.explore-button:hover {
+    color: #902510;
+    background: none;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .genres {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+.schedule-section {
+    padding: 100px 0px;
+    background-color: #f1f1f1;
+    font-family: 'Poppins', sans-serif;
+}
+
+.schedule-section .title {
+    font-size: 36px;
+    color: #902510;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: #fff;
+}
+
+.schedule-table th, .schedule-table td {
+    text-align: center;
+    padding: 15px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+.schedule-table th {
+    background-color: #902510;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.schedule-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.schedule-table tr:hover {
+    background-color: #f0e5e5;
+}
+
+.schedule-table td {
+    color: #555;
+}
+
+.schedule-table td:first-child {
+    font-weight: 600;
+    color: #902510;
+}
+.modalidades-section {
+    padding: 80px 20px;
+    background: linear-gradient(to bottom, #f9f9f9, #e6e6e6);
+    font-family: 'Poppins', sans-serif;
+}
+
+.modalidades-section .title {
+    font-size: 40px;
+    color: #902510;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.modalidades-content {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.modalidade-card {
+    width: 300px;
+    height: 400px;
+    perspective: 1000px; /* Necessário para o efeito de flip */
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.modalidade-card:hover .card-inner {
+    transform: rotateY(180deg); /* Gira o card ao passar o mouse */
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.card-front {
+    background: #fff;
+}
+
+.card-front img {
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+}
+
+.card-front h3 {
+    font-size: 24px;
+    margin-top: 10px;
+    color: #902510;
+}
+
+.card-back {
+    background: #902510;
+    color: #fff;
+    transform: rotateY(180deg); /* Verso do card */
+    padding: 20px;
+}
+
+.card-back h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.card-back p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.register-button {
+    display: inline-block;
+    background: #fff;
+    color: #902510;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.register-button:hover {
+    background: #000;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .modalidades-content {
+        flex-direction: column;
+        align-items: center;
+    }
+}

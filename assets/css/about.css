@@ -1,0 +1,396 @@
+/* home section styling */
+.home2{
+    display: flex;
+    background: linear-gradient(rgba(218, 217, 217, 0.9), rgba(145, 145, 145, 0.9)), url('/assets/img/sobrenos/background_sobrenos.webp') no-repeat center center;
+    height: 100vh;
+    color: #fff;
+    min-height: 500px;
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll; /* Substitua 'fixed' por 'scroll' */
+    font-family: 'Ubuntu', sans-serif;
+}
+/* Adicione uma regra específica para o Safari, se precisar */
+@supports (-webkit-touch-callout: none) {
+    .home2 {
+      background-attachment: scroll; /* O Safari tem problemas com 'fixed' */
+    }
+}
+.home2 .max-width{
+  width: 100%;
+  display: flex;
+}
+.home2 .max-width .row{
+  margin-right: 0;
+}
+.home2 .home-content2 .text-2{
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+.home2 .home-content2 .text-3{
+    font-size: 40px;
+    margin: 5px 0;
+}
+.home2 .home-content2 .text-3 span{
+    color: #902510;
+    font-weight: 500;
+}
+.home2 .home-content2 a{
+    display: inline-block;
+    background: #902510;
+    color: #fff;
+    font-size: 15px;
+    padding: 8px 25px;
+    margin-top: 20px;
+    font-weight: 400;
+    border-radius: 25px;
+    border: 2px solid #902510;
+    transition: all 0.3s ease;
+}
+.home2 .home-content2 a:hover{
+    color: #902510;
+    background: none;
+}
+
+
+/* Estilo Geral da Seção Sobre Nós */
+.sobre-nos {
+    background-color: black;
+     font-family: 'Poppins', sans-serif;
+     padding: 70px 0;
+     position: relative;
+     overflow: hidden;
+     height: 30vh;
+} 
+.sobre-nos .title {
+     font-size: 48px;
+     font-weight: 700;
+     color: #902510;
+     text-align: center;
+     margin-bottom: 50px;
+     position: relative;
+     overflow: hidden;
+} 
+.sobre-nos .title::before {
+     content: '';
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     background: linear-gradient(90deg, #ff6347, #902510, #ff6347);
+     background-clip: text;
+     -webkit-background-clip: text;
+     color: transparent;
+     font-size: 72px;
+     z-index: -1;
+     opacity: 0.1;
+}
+ 
+/* Efeito parallax para o título */
+.sobre-nos .title {
+    animation: parallax 8s linear infinite;
+}
+
+@keyframes parallax {
+     0% { transform: translateY(-10px); }
+     50% { transform: translateY(10px); }
+     100% { transform: translateY(-10px); }
+}
+ 
+ /* História e Visão com Efeito de Aparição */
+.history-vision {
+     height: 61vh;
+     padding: 40px;
+     border-radius: 12px;
+     
+     transition: all 0.3s ease;
+     margin-bottom: 60px;
+     animation: fadeInUp 1s ease forwards;
+     opacity: 0;
+     transform: translateY(50px);     
+} 
+.history-vision:hover {
+    transform: translateY(-5px) scale(1.01);
+}
+.history-vision h3 {
+     font-size: 32px;
+     font-weight: 600;
+     color: #902510;
+     margin-bottom: 20px;
+} 
+.history-vision p {
+     font-size: 18px;
+     line-height: 1.8;
+     color: #555;
+     text-align: justify;
+}
+ 
+@keyframes fadeInUp {
+     to {
+         opacity: 1;
+         transform: translateY(0);
+     }
+}
+ 
+ /* Cards de Instrutores com Animação Hover */
+.team-section {
+    background: #f1f1f1;
+    padding: 100px 0;
+} 
+.team-section h2 {
+    color: black;
+} 
+.team-gallery {
+    display: grid; /* Mantém o layout em grid */
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+    gap: 20px; /* Espaçamento entre os itens */
+    justify-items: center; /* Centraliza os itens horizontalmente */
+    align-items: center; /* Centraliza os itens verticalmente */
+    padding: 20px;
+}
+.team-member {
+    width: 280px; /* Tamanho fixo para as caixas */
+    height: 400px;
+    display: flex; /* Adiciona flexbox para centralizar o conteúdo interno, se necessário */
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 25px;
+    box-shadow: 1px 2px 5px #902510;
+    background: #f1f1f1;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .team-gallery {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+    }
+}
+
+@media (max-width: 480px) {
+    .team-gallery {
+        grid-template-columns: 1fr; /* 1 coluna */
+    }
+}
+
+.team-member img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+} 
+.team-member:hover img {
+    transform: scale(1.1);
+    filter: blur(2px); /* Adiciona um desfoque leve na imagem para destacar o texto */
+} 
+.team-member-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.7); /* Fundo escuro semitransparente */
+    color: #ffffff;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+} 
+.team-member:hover .team-member-content {
+    opacity: 1;
+}
+.team-member h4 {
+    font-size: 22px;
+    color: #ffffff;
+    font-weight: 700;
+    text-align: center;
+    margin: 10px 0 5px;
+} 
+.team-member p {
+    font-size: 16px;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 10px;
+} 
+.team-member blockquote {
+    font-size: 14px;
+    font-style: italic;
+    color: #eeeeee;
+    text-align: center;
+    margin-top: 10px;
+} 
+ 
+/* Estilos gerais do FAQ */
+.faq-section {
+    background: #f1f1f1;
+    padding: 50px 0;
+    font-family: 'Poppins', sans-serif;
+} 
+.faq-section .title {
+    font-size: 36px;
+    color: #902510;
+    text-align: center;
+    margin-bottom: 40px;
+} 
+.faq-container {
+    max-width: 800px;
+    margin: auto;
+} 
+.faq-item {
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+} 
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+} 
+.faq-question h3 {
+    font-size: 20px;
+    color: #333;
+} 
+.faq-toggle {
+    font-size: 24px;
+    color: #902510;
+    transition: transform 0.3s;
+} 
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    color: #555;
+} 
+.faq-answer p {
+    margin: 10px 0;
+} 
+.faq-item.active .faq-answer {
+    max-height: 200px; /* Ajuste conforme necessário */
+} 
+.faq-item.active .faq-toggle {
+    transform: rotate(45deg); /* Muda o "+" para "x" */
+} 
+ 
+/* Sobre Nós Section */
+.why-us-section {
+    background: #f1f1f1;
+    padding: 60px 0;
+    font-family: 'Poppins', sans-serif;
+} 
+.why-us-section .title {
+    font-size: 36px;
+    color: black;
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+} 
+.reasons-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+} 
+.reason-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 1px 2px 5px #902510;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+} 
+.reason-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 5px 5px 10px #902510;
+} 
+.reason-card i {
+    font-size: 50px;
+    color: #902510;
+    margin-bottom: 20px;
+    animation: iconBounce 1s ease infinite alternate;
+} 
+.reason-card h3 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+}
+.reason-card p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
+ 
+@keyframes iconBounce {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-5px);
+    }
+} 
+
+/* Map Section Styling */
+.map-section {
+    padding: 100px 0;
+    background: #f1f1f1;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+.map-section .title {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: black;
+}
+.map-section .map-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.map-section iframe {
+    width: 80%;
+    max-width: 800px;
+    height: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.map-section .address {
+    text-align: center;
+}
+.map-section .address h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+.map-section .address p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+}
+.map-section .address .btn {
+    display: inline-block;
+    padding: 8px 25px;
+    background: #902510;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    border-radius: 25px;
+    text-decoration: none;
+    border: 2px solid #902510;
+    transition: 0.3s ease;
+}
+.map-section .address .btn:hover {
+    color: #902510;
+    background: none;
+}
