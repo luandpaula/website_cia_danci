@@ -147,7 +147,7 @@ section .title::after{
     height: 45px;
     width: 42px;
     background: #902510;
-    right: 30px;
+    left: 30px;
     bottom: 10px;
     text-align: center;
     line-height: 45px;
@@ -1131,7 +1131,7 @@ button {
         font-size: 19px;
     }
     .scroll-up-btn{
-        right: 15px;
+        left: 15px;
         bottom: 15px;
         height: 38px;
         width: 35px;
