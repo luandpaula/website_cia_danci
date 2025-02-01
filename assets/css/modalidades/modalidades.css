@@ -1,66 +1,5 @@
 /* home section styling */
-.home3{
-    display: flex;
-    background: linear-gradient(rgba(218, 217, 217, 0.9), rgba(145, 145, 145, 0.9)), url('/assets/img/modalidades/g22.webp') no-repeat center center;
-    height: 100vh;
-    color: #fff;
-    min-height: 500px;
-    background-size: cover;
-    background-position: center;
-    background-attachment: scroll; /* Substitua 'fixed' por 'scroll' */
-    font-family: 'Ubuntu', sans-serif;
-}
-/* Adicione uma regra específica para o Safari, se precisar */
-@supports (-webkit-touch-callout: none) {
-    .home3 {
-      background-attachment: scroll; /* O Safari tem problemas com 'fixed' */
-    }
-}
-.home3 .max-width{
-  width: 100%;
-  display: flex;
-}
-.home3 .max-width .row{
-  margin-right: 0;
-}
-.home3 .home-content3 .text-2{
-    font-size: 75px;
-    font-weight: 600;
-    margin-left: -3px;
-}
-.home3 .home-content3 .text-3{
-    font-size: 40px;
-    margin: 5px 0;
-}
-.home3 .home-content3 .text-3 span{
-    color: #902510;
-    font-weight: 500;
-}
-.home3 .home-content3 a{
-    display: inline-block;
-    background: #902510;
-    color: #fff;
-    font-size: 15px;
-    padding: 8px 25px;
-    margin-top: 20px;
-    font-weight: 400;
-    border-radius: 25px;
-    border: 2px solid #902510;
-    transition: all 0.3s ease;
-}
-.home3 .home-content3 a:hover{
-    color: #902510;
-    background: none;
-}
 
-
-
-body {
-    font-family: 'Poppins', sans-serif;
-    color: #333;
-    margin: 0;
-    padding: 0;
-}
 
 .page-header {
     text-align: center;
@@ -87,7 +26,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
-    padding: 100px 260px;
+    padding: auto;
     margin: auto;
     gap: 40px;
     background: #f1f1f1;
@@ -145,15 +84,6 @@ body {
     background: none;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    .genres {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-
 .schedule-section {
     padding: 100px 0px;
     background-color: #f1f1f1;
@@ -175,7 +105,8 @@ body {
     background: #fff;
 }
 
-.schedule-table th, .schedule-table td {
+.schedule-table th,
+.schedule-table td {
     text-align: center;
     padding: 15px;
     border: 1px solid #ddd;
@@ -204,6 +135,7 @@ body {
     font-weight: 600;
     color: #902510;
 }
+
 .modalidades-section {
     padding: 80px 20px;
     background: linear-gradient(to bottom, #f9f9f9, #e6e6e6);
@@ -227,7 +159,13 @@ body {
 .modalidade-card {
     width: 300px;
     height: 400px;
-    perspective: 1000px; /* Necessário para o efeito de flip */
+    perspective: 1000px;
+    /* Necessário para o efeito de flip */
+}
+
+.modalidade-card:hover .card-inner {
+    transform: rotateY(180deg);
+    /* Gira o card ao passar o mouse */
 }
 
 .card-inner {
@@ -236,10 +174,6 @@ body {
     position: relative;
     transform-style: preserve-3d;
     transition: transform 0.6s;
-}
-
-.modalidade-card:hover .card-inner {
-    transform: rotateY(180deg); /* Gira o card ao passar o mouse */
 }
 
 .card-front,
@@ -277,7 +211,8 @@ body {
 .card-back {
     background: #902510;
     color: #fff;
-    transform: rotateY(180deg); /* Verso do card */
+    transform: rotateY(180deg);
+    /* Verso do card */
     padding: 20px;
 }
 
@@ -291,26 +226,129 @@ body {
     margin-bottom: 20px;
 }
 
-.register-button {
+
+
+/* skills section styling */
+.skills {
+    background: #f1f1f1;
+    font-family: 'Poppins', sans-serif;
+}
+
+.skills .skills-content .column {
+    width: calc(50% - 30px);
+}
+
+.skills .skills-content .left .text {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.skills .skills-content .left p {
+    text-align: justify;
+}
+
+.skills .skills-content .left a {
     display: inline-block;
-    background: #fff;
-    color: #902510;
-    padding: 10px 20px;
-    border-radius: 25px;
-    font-size: 14px;
-    font-weight: 500;
-    text-decoration: none;
-    transition: background 0.3s ease, color 0.3s ease;
-}
-
-.register-button:hover {
-    background: #000;
+    background: #902510;
     color: #fff;
+    font-size: 15px;
+    padding: 8px 25px;
+    margin-top: 20px;
+    font-weight: 400;
+    border-radius: 25px;
+    border: 2px solid #902510;
+    transition: all 0.3s ease;
 }
 
+.skills .skills-content .left a:hover {
+    color: #902510;
+    background: none;
+}
+
+.skills .skills-content .right .bars {
+    margin-bottom: 15px;
+}
+
+.skills .skills-content .right .info {
+    display: flex;
+    margin-bottom: 5px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.skills .skills-content .right span {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.skills .skills-content .right .line {
+    height: 5px;
+    width: 100%;
+    background: lightgrey;
+    position: relative;
+}
+
+.skills .skills-content .right .line::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: #902510;
+}
+
+.skills-content .right .html::before {
+    width: 90%;
+}
+
+.skills-content .right .css::before {
+    width: 69%;
+}
+
+.skills-content .right .js::before {
+    width: 60%;
+}
+
+.skills-content .right .php::before {
+    width: 70%;
+}
+
+.skills-content .right .mysql::before {
+    width: 85%;
+}
+
+
+/* Adicione uma regra específica para o Safari, se precisar */
+@supports (-webkit-touch-callout: none) {
+    .home3 {
+        background-attachment: scroll;
+        /* O Safari tem problemas com 'fixed' */
+    }
+}
+
+@media (max-width: 947px) {
+    .skills .skills-content .column {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+}
+
+
+/* Responsividade */
 @media (max-width: 768px) {
+    .genres {
+        flex-direction: column;
+        align-items: center;
+    }
     .modalidades-content {
         flex-direction: column;
         align-items: center;
+    }
+}
+
+@media (max-width: 500px) {
+    .skills .skills-content .left .text {
+        font-size: 19px;
     }
 }
