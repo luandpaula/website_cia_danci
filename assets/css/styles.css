@@ -2,28 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
 
 
-/* teams section styling 
-
-
-
-.modal {
-    display: none;
-    /* Inicialmente oculto 
-    position: fixed;
-    z-index: 9000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    /* Fundo com opacidade 
-}*/
-
-
-
-
-
-
+/* teams section styling */
 .why-us-section {
     background: linear-gradient(135deg, #f1f1f1, #f1f1f1);
     padding: 60px 0;
@@ -41,24 +20,6 @@
     margin-bottom: 40px;
     position: relative;
 }
-
-
-/*
-.reason-card {
-    background: #fff;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-}
-
-.reason-card:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 15px 30px rgba(233, 233, 233, 0.438);
-}*/
 
 
 .reasons-container {
@@ -81,7 +42,7 @@
 }
 
 .reason-card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-10px) scale(1.02);
     box-shadow: 5px 5px 10px #902510;
 }
 
@@ -108,105 +69,6 @@
 
 
 
-
-/* Modalidades section styling */
-.modalidades {
-    padding: 100px 0;
-    color: #fff;
-    background: #111;
-    font-family: 'Poppins', sans-serif;
-}
-
-.modalidades .title::before {
-    background: #fff;
-}
-
-.modalidades .title {
-    position: relative;
-    text-align: center;
-    font-size: 40px;
-    font-weight: 500;
-    margin-bottom: 60px;
-    padding-bottom: 20px;
-    font-family: 'Ubuntu', sans-serif;
-}
-
-.modalidades .modalidades-content {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.modalidades .card {
-    background: #222;
-    border-radius: 25px;
-    text-align: center;
-    padding: 20px;
-    box-shadow: 1px 2px 5px #902510;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    width: calc(33% - 20px);
-}
-
-.modalidades .card:hover {
-    transform: translateY(-4px);
-    box-shadow: 5px 5px 10px #902510;
-    cursor: pointer;
-}
-
-.modalidades .modalidades-content:hover> :not(:hover) {
-    filter: blur();
-    opacity: 0.5;
-}
-
-.modalidades .circle {
-    height: 150px;
-    width: 150px;
-    margin: 0 auto 20px;
-    border-radius: 50%;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.modalidades .circle img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.modalidades .card h3 {
-    font-size: 22px;
-    color: #fff;
-    font-weight: 600;
-    margin: 15px 0;
-}
-
-.modalidades .card p {
-    font-size: 16px;
-    color: #fff;
-    margin-bottom: 15px;
-    text-align: justify;
-}
-
-.modalidades .card .btn {
-    display: inline-block;
-    padding: 8px 25px;
-    background: #902510;
-    color: #fff;
-    margin-top: 20px;
-    font-size: 15px;
-    font-weight: 400;
-    border-radius: 25px;
-    text-decoration: none;
-    border: 2px solid #902510;
-    transition: all 0.3s ease;
-}
-
-.modalidades .card .btn:hover {
-    color: #902510;
-    background: none;
-}
 
 
 
@@ -273,83 +135,6 @@
     background: #d64430;
 }
 
-/* Modal Styles */
-.modal2 {
-    display: none;
-    /* Oculta o modal por padrão */
-    position: fixed;
-    z-index: 1050;
-    /* Certifique-se de que está acima de outros elementos */
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    /* Fundo escuro com transparência */
-    justify-content: center;
-    align-items: center;
-}
-
-.modal-content2 {
-    display: flex;
-    justify-content: space-around;
-    background: white;
-    padding: 20px;
-    border-radius: 25px;
-    width: 100%;
-    max-width: 700px;
-    position: relative;
-    z-index: 1100;
-    transition: all 0.3s ease;
-    box-shadow: 1px 2px 5px #902510;
-}
-
-.modal-content2:hover {
-    transform: translateY(-4px);
-    box-shadow: 5px 5px 10px #902510;
-}
-
-.modal-content2 p {
-    font-size: 18px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-.modal-content2 label {
-    display: block;
-    margin: 10px 0 5px;
-    width: 80%;
-}
-
-.modal-content2 input,
-.modal-content2 textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 100%;
-}
-
-.modal-content2 button {
-    width: 100%;
-    background-color: #902510;
-    padding: 10px;
-    color: white;
-    width: 50%;
-    cursor: pointer;
-    border-radius: 25px;
-}
-
-.modal-content2 button:hover {
-    background-color: #80210e;
-}
-
-.modal-content2 i {
-    margin-top: 10px;
-    font-size: 25px;
-    color: #902510;
-}
 
 .close-btn {
     position: absolute;

@@ -88,6 +88,10 @@
     padding: 100px 0px;
     background-color: #f1f1f1;
     font-family: 'Poppins', sans-serif;
+    
+}
+.schedule-section .schedule-t {
+    overflow-x: auto;
 }
 
 .schedule-section .title {
@@ -103,6 +107,7 @@
     margin: 0 auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background: #fff;
+    
 }
 
 .schedule-table th,
@@ -168,6 +173,7 @@
     /* Gira o card ao passar o mouse */
 }
 
+
 .card-inner {
     width: 100%;
     height: 100%;
@@ -227,7 +233,6 @@
 }
 
 
-
 /* skills section styling */
 .skills {
     background: #f1f1f1;
@@ -235,13 +240,13 @@
 }
 
 .skills .skills-content .column {
-    width: calc(50% - 30px);
+    width: auto;
+    margin-bottom: 3%;
 }
 
 .skills .skills-content .left .text {
     font-size: 20px;
     font-weight: 600;
-    margin-bottom: 10px;
 }
 
 .skills .skills-content .left p {
@@ -267,7 +272,7 @@
 }
 
 .skills .skills-content .right .bars {
-    margin-bottom: 15px;
+    margin-bottom: 1%;
 }
 
 .skills .skills-content .right .info {
@@ -341,6 +346,7 @@
         flex-direction: column;
         align-items: center;
     }
+
     .modalidades-content {
         flex-direction: column;
         align-items: center;
