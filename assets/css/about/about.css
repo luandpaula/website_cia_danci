@@ -5,9 +5,6 @@ iframe {
 }
 
 
-
-
-
 /* Cards de Instrutores com Animação Hover */
 .team-section {
     background: #f1f1f1;
@@ -170,64 +167,7 @@ iframe {
     /* Muda o "+" para "x" */
 }
 
-/* Sobre Nós Section */
-.why-us-section {
-    background: #f1f1f1;
-    padding: 60px 0;
-    font-family: 'Poppins', sans-serif;
-}
 
-.why-us-section .title {
-    font-size: 36px;
-    color: black;
-    text-align: center;
-    margin-bottom: 40px;
-    position: relative;
-}
-
-.reasons-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.reason-card {
-    background: #fff;
-    padding: 30px;
-    border-radius: 25px;
-    box-shadow: 1px 2px 5px #902510;
-    text-align: center;
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-}
-
-.reason-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 5px 5px 10px #902510;
-}
-
-.reason-card i {
-    font-size: 50px;
-    color: #902510;
-    margin-bottom: 20px;
-    animation: iconBounce 1s ease infinite alternate;
-}
-
-.reason-card h3 {
-    font-size: 22px;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 15px;
-}
-
-.reason-card p {
-    font-size: 16px;
-    color: #666;
-    line-height: 1.6;
-}
 
 /* Map Section Styling */
 .map-section {

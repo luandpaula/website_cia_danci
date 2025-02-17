@@ -30,6 +30,8 @@
     margin: auto;
     gap: 40px;
     background: #f1f1f1;
+    
+    font-family: 'Poppins', sans-serif;
 }
 
 .genre {
@@ -141,37 +143,7 @@
     color: #902510;
 }
 
-.modalidades-section {
-    padding: 80px 20px;
-    background: linear-gradient(to bottom, #f9f9f9, #e6e6e6);
-    font-family: 'Poppins', sans-serif;
-}
 
-.modalidades-section .title {
-    font-size: 40px;
-    color: #902510;
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.modalidades-content {
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.modalidade-card {
-    width: 300px;
-    height: 400px;
-    perspective: 1000px;
-    /* Necessário para o efeito de flip */
-}
-
-.modalidade-card:hover .card-inner {
-    transform: rotateY(180deg);
-    /* Gira o card ao passar o mouse */
-}
 
 
 .card-inner {
@@ -324,13 +296,6 @@
 }
 
 
-/* Adicione uma regra específica para o Safari, se precisar */
-@supports (-webkit-touch-callout: none) {
-    .home3 {
-        background-attachment: scroll;
-        /* O Safari tem problemas com 'fixed' */
-    }
-}
 
 @media (max-width: 947px) {
     .skills .skills-content .column {
@@ -347,10 +312,7 @@
         align-items: center;
     }
 
-    .modalidades-content {
-        flex-direction: column;
-        align-items: center;
-    }
+    
 }
 
 @media (max-width: 500px) {
