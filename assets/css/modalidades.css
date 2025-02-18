@@ -1,7 +1,16 @@
+/* all similar content styling codes */
+section{
+    padding: 100px 0;
+}
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
 /* home section styling */
 .home3{
     display: flex;
-    background: linear-gradient(rgba(218, 217, 217, 0.9), rgba(145, 145, 145, 0.9)), url('/assets/img/modalidades/g22.webp') no-repeat center center;
+    background: linear-gradient(rgba(218, 217, 217, 0.9), rgba(145, 145, 145, 0.9)), url('/assets/img/sobrenos/background_sobrenos.webp') no-repeat center center;
     height: 100vh;
     color: #fff;
     min-height: 500px;
@@ -18,7 +27,7 @@
 }
 .home3 .max-width{
   width: 100%;
-  display: flex;
+  display: auto;
 }
 .home3 .max-width .row{
   margin-right: 0;
@@ -87,8 +96,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
-    padding: 100px 260px;
-    margin: auto;
+    padding: 5% 5%;
     gap: 40px;
     background: #f1f1f1;
 }
@@ -97,7 +105,7 @@ body {
     background: #ffffff;
     border-radius: 25px;
     box-shadow: 1px 2px 5px #902510;
-    padding: 20px;
+    padding: 5%;
     max-width: 350px;
     text-align: center;
     transition: all 0.3s ease;
@@ -126,7 +134,6 @@ body {
     color: #555;
     line-height: 1.6;
 }
-
 .explore-button {
     display: inline-block;
     background-color: #902510;
@@ -145,19 +152,14 @@ body {
     background: none;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    .genres {
-        flex-direction: column;
-        align-items: center;
-    }
-}
+
 
 
 .schedule-section {
     padding: 100px 0px;
     background-color: #f1f1f1;
     font-family: 'Poppins', sans-serif;
+   
 }
 
 .schedule-section .title {
@@ -173,6 +175,7 @@ body {
     margin: 0 auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background: #fff;
+    ;
 }
 
 .schedule-table th, .schedule-table td {
@@ -203,6 +206,7 @@ body {
 .schedule-table td:first-child {
     font-weight: 600;
     color: #902510;
+    
 }
 .modalidades-section {
     padding: 80px 20px;
@@ -312,5 +316,33 @@ body {
     .modalidades-content {
         flex-direction: column;
         align-items: center;
+    }
+    .genres {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 690px) {
+    .max-width{
+        padding: 0 23px;
+    }
+    .home3 .home-content3 .text-2{
+        font-size: 60px;
+    }
+    .home3 .home-content3 .text-3{
+        font-size: 32px;
+    }
+    .home3 .home-content3 a{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .home3 .home-content3 .text-2{
+        font-size: 50px;
+    }
+    .home3 .home-content3 .text-3{
+        font-size: 27px;
     }
 }
