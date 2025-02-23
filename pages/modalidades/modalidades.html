@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>CIA DANCI | Modalidades</title>
-
-    <link rel="stylesheet" href="/assets/css/styles.css">
     <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    
     <link rel="stylesheet" href="/assets/css/modalidades.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
@@ -22,7 +22,6 @@
     <style> body { background-color: #f1f1f1;} </style>
 </head>
 <body>
-
     <div class="scroll-up-btn">
         <i class="fas fa-angle-up"></i>
     </div>
@@ -33,10 +32,9 @@
                 <li><a href="/index.html" class="menu-btn">Home</a></li>
                 <li><a href="/pages/about/about.html" class="menu-btn">Sobre nós</a></li>
                 <li><a href="/pages/modalidades/modalidades.html" class="menu-btn">Modalidades</a></li>
-                <li></li>
                 <li><a href="https://www.instagram.com/grupoanaacintia" target="_blank" class="menu-btn">Grupo Ana Cintia</a></li>
+                <li><a id="open-form-btn">Contato</a></li>
             </ul>
-            <button id="open-form-btn">Contato</button>
             <div class="menu-btn">
                 <i class="fas fa-bars"></i>
             </div>
@@ -44,9 +42,9 @@
     </nav>
 
     <!-- home section start -->
-    <section class="home3" id="home3">
+    <section class="home" id="home">
         <div class="max-width">
-            <div class="home-content3">
+            <div class="home-content">
                 <div class="text-2">NOSSAS MODALIDADES</div>
                 <div class="text-3">Venha se movimentar com a gente.</div>
                 <a href="https://wa.me/5511975961263" target="_blank">Contate Nosso WhatsApp</a>
@@ -151,7 +149,8 @@
     <section id="schedule" class="schedule-section">
         <div class="max-width">
             <h2 class="title">Grade Horária</h2>
-            <table class="schedule-table">
+            <div style="overflow-x:auto">
+            <table class="schedule-table" >
                 <thead>
                     <tr>
                         <th>Horário</th>
@@ -283,6 +282,7 @@
                     </tr>
                 </tbody>
             </table>
+            </div>
         </div>
     </section>
     
